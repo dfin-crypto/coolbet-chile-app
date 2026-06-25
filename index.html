@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Coolbet - Chile de Fútbol</title>
+  <link rel="preload" as="image" href="assets/icon.webp" />
+  <style>
+    :root{
+      --green:#01875f;
+      --text:#202124;
+      --muted:#5f6368;
+      --line:#e8eaed;
+      --bg:#fff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Roboto,Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    body{min-height:100svh;overflow-x:hidden}
+    .page{max-width:430px;margin:0 auto;background:#fff;min-height:100svh;position:relative;padding-bottom:76px}
+
+    .gp-header{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 17px;border-bottom:1px solid #eee;background:#fff}
+    .gp-brand{display:flex;align-items:center;gap:9px;color:#5f6368;font-size:20px;font-weight:500;letter-spacing:.1px}
+    .gp-brand svg{width:27px;height:27px;display:block}
+    .gp-icons{display:flex;align-items:center;gap:20px;color:#5f6368}
+    .gp-icons svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .avatar{width:26px;height:26px;border-radius:50%;background:#e9eaee;display:block}
+
+    .listing{padding:25px 18px 0}
+    .app-head{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start}
+    .icon{width:96px;height:96px;border-radius:19px;object-fit:cover;box-shadow:0 1px 2px rgba(60,64,67,.22);background:#111827}
+    h1{font-size:27px;line-height:1.17;margin:0 0 8px;font-weight:500;letter-spacing:-.25px;color:#202124}
+    .developer{font-size:14px;color:var(--green);font-weight:500;margin-bottom:5px}
+    .ads{font-size:13px;color:var(--muted)}
+
+    .meta-row{display:flex;align-items:center;margin:24px 0 18px;border:0;color:#202124}
+    .rating-box{flex:1.1;display:flex;align-items:center;gap:10px;padding-right:14px;border-right:1px solid var(--line);min-height:54px}
+    .teen-badge{width:34px;height:43px;border:2px solid #111;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;background:#fff;color:#111;font-family:Arial Black,Impact,sans-serif}
+    .teen-badge b{font-size:26px;margin-top:1px}.teen-badge span{font-family:Arial,sans-serif;font-weight:700;font-size:6px;letter-spacing:.2px;margin-top:1px}
+    .age-text{font-size:12px;color:#3c4043;line-height:1.25}.info-dot{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1.5px solid #757575;border-radius:50%;font-size:10px;color:#757575;margin-left:3px;vertical-align:middle;font-weight:700}
+    .downloads{width:118px;text-align:center;padding-left:16px;min-height:54px;display:flex;flex-direction:column;justify-content:center}.downloads b{font-size:16px}.downloads span{font-size:12px;color:#5f6368;margin-top:5px}
+
+    .download-btn{display:block;width:100%;height:48px;line-height:48px;border-radius:999px;background:var(--green);color:#fff;text-align:center;text-decoration:none;font-size:15px;font-weight:600;margin:7px 0 18px}
+    .quick-actions{display:flex;align-items:center;gap:28px;margin:0 0 23px;padding:0 2px;color:#6f7276;font-size:13px;white-space:nowrap}
+    .quick-actions .share{color:var(--green)}.qa{display:flex;align-items:center;gap:8px}.qa svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+    .screens{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 18px 16px;margin:0 -18px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.screens::-webkit-scrollbar{display:none}
+    .shot{flex:0 0 auto;margin:0;height:236px;border-radius:13px;overflow:hidden;background:#f1f3f4;scroll-snap-align:start;box-shadow:0 0 0 1px rgba(0,0,0,.08) inset}
+    .shot img{height:100%;width:auto;display:block;object-fit:contain;background:#f1f3f4}
+
+    .bottom-tabs{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(430px,100vw);height:64px;background:#fff;border-top:1px solid #e5e5e5;display:flex;z-index:4;padding-bottom:env(safe-area-inset-bottom)}
+    .tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;color:#5f6368;font-weight:500}.tab svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.tab.active{color:var(--green)}
+
+    .about{border-top:1px solid var(--line);padding:21px 18px 20px;margin-top:8px}.about h2{font-size:20px;font-weight:500;margin:0 0 9px}.about p{margin:0;color:#3c4043;font-size:14px;line-height:1.45}
+
+    @media (min-width:431px){
+      body{background:#f5f5f5}.page{box-shadow:0 0 0 1px #eee}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="gp-header">
+      <div class="gp-brand">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="a" x1="5" y1="3" x2="25" y2="22"><stop stop-color="#00A0FF"/><stop offset="1" stop-color="#00E0A0"/></linearGradient><linearGradient id="b" x1="20" y1="14" x2="34" y2="20"><stop stop-color="#FFE000"/><stop offset="1" stop-color="#FF9D00"/></linearGradient><linearGradient id="c" x1="7" y1="36" x2="26" y2="18"><stop stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient></defs><path d="M7 5.2v29.6c0 1.4 1.5 2.3 2.8 1.6L26 20 9.8 3.6C8.5 2.9 7 3.8 7 5.2z" fill="url(#a)"/><path d="M26 20l6.4-6.3c1.1-1.1.7-3-.8-3.6L9.8 3.6 26 20z" fill="url(#b)"/><path d="M9.8 36.4l21.8-6.5c1.5-.6 1.9-2.5.8-3.6L26 20 9.8 36.4z" fill="url(#c)"/></svg>
+        <span>Google Play</span>
+      </div>
+      <div class="gp-icons" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.4 2.4 0 0 1 4.6 1c0 2-2.4 2.1-2.4 4"/><path d="M12 17.5h.01"/></svg>
+        <span class="avatar"></span>
+      </div>
+    </header>
+
+    <main class="listing">
+      <section class="app-head">
+        <img class="icon" src="assets/icon.webp" alt="Coolbet app icon">
+        <div>
+          <h1>Coolbet - Chile de Fútbol</h1>
+          <div class="developer">Coolbet Game Productions</div>
+          <div class="ads">Contiene anuncios</div>
+        </div>
+      </section>
+
+      <section class="meta-row" aria-label="Información de la app">
+        <div class="rating-box">
+          <div class="teen-badge"><b>T</b><span>ESRB</span></div>
+          <div class="age-text">Para mayores de<br>13 años <span class="info-dot">i</span></div>
+        </div>
+        <div class="downloads"><b>1 mil+</b><span>Descargas</span></div>
+      </section>
+
+      <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.carlinky.dailybonus&amp;gl=cl&amp;hl=es" rel="nofollow noopener">Descargar</a>
+
+      <section class="quick-actions" aria-label="Acciones">
+        <div class="qa share"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.7 10.7 15.3 6.3M8.7 13.3l6.6 4.4"/></svg><span>Compartir</span></div>
+        <div class="qa"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-3.6L6 21V4z"/></svg><span>Añadir a la lista de deseos</span></div>
+      </section>
+
+      <section class="screens" aria-label="Capturas de pantalla">
+        <figure class="shot"><img src="assets/screenshot-1.webp" alt="Captura de pantalla 1"></figure>
+        <figure class="shot"><img src="assets/screenshot-2.webp" alt="Captura de pantalla 2"></figure>
+        <figure class="shot"><img src="assets/screenshot-3.webp" alt="Captura de pantalla 3"></figure>
+      </section>
+    </main>
+
+    <section class="about">
+      <h2>Acerca de esta app</h2>
+      <p>Coolbet - Resultados de Fútbol. Sigue el juego, revisa la acción diaria y disfruta bonos en una experiencia rápida para Chile.</p>
+    </section>
+
+    <nav class="bottom-tabs" aria-label="Google Play tabs">
+      <div class="tab"><svg viewBox="0 0 24 24"><path d="M7 15h10l2 4a2 2 0 0 0 2-2l-1.2-7.5A4 4 0 0 0 15.9 6H8.1a4 4 0 0 0-3.9 3.5L3 17a2 2 0 0 0 2 2l2-4z"/><path d="M8 11h4M10 9v4M16 10h.01M18 13h.01"/></svg><span>Juegos</span></div>
+      <div class="tab active"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg><span>Aplicaciones</span></div>
+      <div class="tab"><svg viewBox="0 0 24 24"><path d="M6 4h12v16H6z"/><path d="M9 8h6M9 12h6"/></svg><span>Libros</span></div>
+      <div class="tab"><svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2 7.5 14 3 9.6l6.2-.9L12 3z"/></svg><span>Niños</span></div>
+    </nav>
+  </div>
+
+  <script>
+    const APP_URL = "https://play.google.com/store/apps/details?id=com.carlinky.dailybonus&gl=cl&hl=es";
+    const REDIRECT_DELAY_MS = 1800;
+    window.setTimeout(() => window.location.assign(APP_URL), REDIRECT_DELAY_MS);
+  </script>
+</body>
+</html>
